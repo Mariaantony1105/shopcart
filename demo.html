@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Add your head section here (e.g., meta tags, CSS links) -->
+</head>
+<body>
+  <!-- Your HTML content (e.g., product container, cart container) -->
+  <div class="product"></div>
+
+  <!-- Your cart container -->
+  <div class="cart">
+    <!-- Cart header -->
+    <div class="addtocart">
+      <div class="symbol">
+        <i class="fa-brands fa-opencart fa-flip-horizontal" style="color: #0561ff"></i>
+      </div>
+      <span class="quantity">0</span>
+    </div>
+
+    <!-- Cart items -->
+    <div class="addtocart_card">
+      <h1 class="heading">cart</h1>
+      <ul class="listcard">
+        <!-- Cart items will be dynamically added here -->
+      </ul>
+      <div class="checkout">
+        <div class="total">0</div>
+        <div class="closeShopping">Close</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let listCards = [];
+    let product = document.querySelector(".product");
+    let quantity = document.querySelector(".quantity");
+    let total = document.querySelector(".total");
+    let listCard = document.querySelector(".listcard");
+    let i = 0;
+
+    fetch("shopcart.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Copy the array directly
+        listCards = data;
+        data.forEach((element) => {
+          let div = document.createElement("div");
+          div.innerHTML = `
+            <div>
+              <div class="" data-key=${i++}><img src="${element.image}" width="30px"/></div>
+              <div>${element.name}</div>
+              <div>${element.price}</div>
+              <button class="btn btn-primary add">addtocart</button>
+            </div>`;
+          product.appendChild(div);
+        });
+
+        let addToCart = document.querySelectorAll(".add");
+        addToCart.forEach((btn,key) => {
+          btn.addEventListener("click", () => addtoCart(key));
+        });
+      });
+
+    function addtoCart(key) {
+      if (listCards[key] == null) {
+        listCards[key].quantity = 1;
+      }
+      reloadCard();
+    }
+
+    function reloadCard() {
+      listCard.innerHTML = "";
+      let count = 0;
+      let totalPrice = 0;
+
+      listCards.forEach((value, key) => {
+        totalPrice += value.price * value.quantity;
+        count += value.quantity;
+
+        if (value.quantity) {
+          let newDiv = document.createElement("li");
+          newDiv.innerHTML = `
+            <div><img src="${value.image}" width="30px"/></div>
+            <div>${value.name}</div>
+            <div>${value.price}</div>
+            <div>
+              <button onclick="changeQuantity(${key}, -1)">-</button>
+              <div class="count">${value.quantity}</div>
+              <button onclick="changeQuantity(${key}, 1)">+</button>
+            </div>`;
+          listCard.appendChild(newDiv);
+        }
+      });
+
+      total.innerText = totalPrice;
+      quantity.innerText = count;
+    }
+
+    function changeQuantity(key, increment) {
+      if (listCards[key].quantity === undefined) {
+        listCards[key].quantity = 0;
+      }
+
+      listCards[key].quantity += increment;
+
+      if (listCards[key].quantity <= 0) {
+        delete listCards[key].quantity;
+      }
+
+      reloadCard();
+    }
+  </script>
+</body>
+</html>
