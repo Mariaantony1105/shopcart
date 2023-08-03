@@ -1,0 +1,87 @@
+<html>
+    <head>
+		<title>Welcome to WeInsure</title>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+        <script type="text/javascript" src="js/tabs.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+
+    </head>
+    <body>
+        <!--top header-->
+
+        <header id="home">
+            <!--main-nav-->
+            <div id="main-nav">
+                <nav class="navbar">
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand">WeInsure</a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="ftheme">
+                        <ul class="nav navbar-nav navbar-right">                           
+                            <li><a href="index.html#home"><span class="glyphicon glyphicon-home"></span>&nbsp;home</a></li>
+                            <li><a href="index.html#about"><span class="glyphicon glyphicon-link"></span>&nbsp;about</a></li>
+                            <li><a href="index.html#policies"><span class="glyphicon glyphicon-book"></span>&nbsp;policies</a></li>
+                            <li><a href="index.html#agent"><span class="glyphicon glyphicon-search"></span>&nbsp;find an agent</a></li>
+                            <li><a href="index.html#contact"><span class="glyphicon glyphicon-headphones"></span>&nbsp;contact us</a></li>
+
+                            <li>
+                                <button id="logout" class="btn btn-lg btn-primary">Logout</button>
+                            </li>
+                        </ul>
+
+                    </div>                       
+
+                </nav>
+            </div>
+
+        </header>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1" id="sum">Summary Details</a></li>
+                        <li><a href="#tabs-2" id="pol">Policy Details</a></li>
+                        <li><a href="#tabs-3" id="edit">Edit Policy</a></li>
+                    </ul>
+                    <div id="tabs-1" style="text-align: left">
+                    </div>
+                    <div id="tabs-2"></div>
+                    <div id="tabs-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--bottom footer-->
+        <div id="foot" class="hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-left">
+                            &copy; ETA UI & Markup Team. All rights reserved                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="footer-right">
+                            <ul class="list-unstyled list-inline pull-right">
+                                <li><a href="index.html#home">Home</a></li>
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="index.html#policies">Policies</a></li>
+                                <li><a href="index.html#agent">Find an Agent</a></li>
+                                <li><a href="index.html#contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

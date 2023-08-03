@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Ratul",
+        "password": "abcratul",
+        "role": "admin"
+    },
+    {
+        "username": "Naveen",
+        "password": "abcnaveen",
+        "role": "admin"
+    },
+    {
+        "username": "Veena",
+        "password": "abcveena",
+        "role": "admin"
+    },
+    {
+        "username": "Anupama",
+        "password": "abcanupama",
+        "role": "user"
+    },
+    {
+        "username": "Urvi",
+        "password": "abcurvi",
+        "role": "user"
+    },
+    {
+        "username": "Rachita",
+        "password": "abcrachita",
+        "role": "user"
+    }
+]

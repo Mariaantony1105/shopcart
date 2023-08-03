@@ -1,0 +1,57 @@
+[
+    {
+        "city": "Delhi",
+        "name": "Sanjna",
+        "agentId": "713476",
+        "email": "sanjna_hans@abc.com",
+        "phone": "8922358428"
+    },
+    {
+        "city": "Hyderabad",
+        "name": "Prajila",
+        "agentId": "713461",
+        "email": "prajila_vk@abc.com",
+        "phone": "8922352827"
+    }
+    ,
+    {
+        "city": "Delhi",
+        "name": "Saumya",
+        "agentId": "713346",
+        "email": "saumya@abc.com",
+        "phone": "9228884228"
+    }
+    ,
+    {
+        "city": "Mumbai",
+        "name": "Mohit",
+        "agentId": "713571",
+        "email": "mohit@abc.com",
+        "phone": "9023284323"
+    }
+    ,
+    {
+        "city": "Bangalore",
+        "name": "Naveen",
+        "agentId": "710007",
+        "email": "naveen@abc.com",
+        "phone": "8283092372"
+    },
+    {
+        "city": "Bangalore",
+        "name": "Kavya",
+        "agentId": "610892",
+        "email": "kavya@abc.com",
+        "phone": "8349339932"
+    },
+    {
+        "city": "Chennai",
+        "name": "Anupama",
+        "agentId": "709985",
+        "email": "anupama@abc.com",
+        "phone": "9026387332"
+
+    }
+]
+
+
